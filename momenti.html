@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Momenti | Buon Anniversario Milly.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+ <!-- ========================= NAVBAR ========================= -->
+  <section class="navbar-section">
+    <nav class="navbar" aria-label="Navigazione principale">
+      <a href="#" class="brand" data-page="home">
+        <svg class="brand-heart" viewBox="0 0 24 24" fill="#ffffff"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        Milly e Luen
+      </a>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="momenti.html">Momenti</a></li>
+        <li><a href="TiAmo.html" data-page="Ti Amo">Ti Amo</a></li>
+      </ul>
+    </nav>
+  </section>
+
+ 
+   <!-- ========================= MOMENTO ========================= -->
+   <section class="momento">
+    <div class="momento-photo" id="momentoFoto">
+      <span class="tape tape-left"></span>
+      <span class="tape tape-right"></span>
+      <img src ="mesi-jpg/set.jpg">
+    </div>
+    <div class="momento-text">
+      <p class="momento-date"></p>  
+    </div>
+  </section>
+  
+
+   <footer class="site-footer" id="contatti">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h2>CONTATTAMI</h2>
+        <p>Scrivimi quando vuoi: rispondo sempre, magari con un cuore in più del dovuto.</p>
+      </div>
+      <div class="footer-col">
+        <h4>NAVIGA</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="momenti.html">Momenti</a></li>
+          <li><a href="tiamo.html">Ti Amo</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>SCRIVIMI</h4>
+        <ul>
+          <li><p>ilnostroamore@esempio.it</p></li>
+          <li><p>+39 000 000 0000</p></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>SEGUIMI</h4>
+        <div class="socials">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="WhatsApp">WA</a>
+          <a href="#" aria-label="Email">@</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Il Nostro Amore. Tutti i diritti riservati.</p>
+      <p>Fatto con ❤ per te.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Un'unica animazione di comparsa quando la foto entra nello schermo
+    const foto = document.getElementById('momentoFoto');
+    if ('IntersectionObserver' in window){
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting){
+            foto.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.35 });
+      observer.observe(foto);
+    } else {
+      foto.classList.add('is-visible');
+    }
+  </script>
+
+</body>
+</html>

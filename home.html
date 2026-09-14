@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buon Anniversario Milly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================= NAVBAR ========================= -->
+  <section class="navbar-section">
+    <nav class="navbar" aria-label="Navigazione principale">
+      <a href="#" class="brand" data-page="home">
+        <svg class="brand-heart" viewBox="0 0 24 24" fill="#ffffff"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        Milly e Luen
+      </a>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="momenti.html">Momenti</a></li>
+        <li><a href="TiAmo.html">Ti Amo</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <!-- ========================= HERO: CUORE 3D ========================= -->
+ <section class="hero" aria-label="Presentazione">
+    <div class="hero-caption">
+      <h1>Buon Anniversario Milly</h1>
+      <p>per questo anniversario ho cercato di farti un sitoweb tutto nostro.</p>
+    </div>
+    <div class="heart-stage" id="heartStage">
+      <div class="heart-mover" id="heartMover" style="transform: translate3d(148.8px, 193.7px, 0px);">
+        <div class="heart-visual">
+          <div class="heart-glow"></div>
+          <svg viewBox="0 0 32 30" xmlns="http://www.w3.org/2000/svg" overflow="visible">
+            <defs>
+              <linearGradient id="heartGrad" x1="0.15" y1="0" x2="0.9" y2="1">
+                <stop offset="0%" stop-color="#ffc3d4"></stop>
+                <stop offset="35%" stop-color="#ff6f92"></stop>
+                <stop offset="70%" stop-color="#e0304f"></stop>
+                <stop offset="100%" stop-color="#b81c3a"></stop>
+              </linearGradient>
+              <radialGradient id="heartShine" cx="0.32" cy="0.28" r="0.4">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"></stop>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0"></stop>
+              </radialGradient>
+              <path id="heartPath" d="M16 27.2 L13.6 25 C6.4 18.4 2 14.3 2 9.4 2 5.4 5.1 2.4 9 2.4c2.2 0 4.4 1.05 5.8 2.7C16.2 3.45 18.4 2.4 20.6 2.4c3.9 0 7 3 7 7 0 4.9-4.4 9-11.6 15.6L16 27.2z"></path>
+            </defs>
+
+            <!-- strati posteriori: creano lo spessore / estrusione 3D -->
+            <use href="#heartPath" fill="#450816" transform="translate(3.6,3.6)"></use>
+            <use href="#heartPath" fill="#4e0a19" transform="translate(3.2,3.2)"></use>
+            <use href="#heartPath" fill="#590d1d" transform="translate(2.8,2.8)"></use>
+            <use href="#heartPath" fill="#631021" transform="translate(2.4,2.4)"></use>
+            <use href="#heartPath" fill="#6d1225" transform="translate(2.0,2.0)"></use>
+            <use href="#heartPath" fill="#781529" transform="translate(1.6,1.6)"></use>
+            <use href="#heartPath" fill="#83182e" transform="translate(1.2,1.2)"></use>
+            <use href="#heartPath" fill="#921a34" transform="translate(0.9,0.9)"></use>
+            <use href="#heartPath" fill="#a51c3a" transform="translate(0.6,0.6)"></use>
+            <use href="#heartPath" fill="#c9203f" transform="translate(0.3,0.3)"></use>
+
+            <!-- faccia frontale -->
+            <use href="#heartPath" fill="url(#heartGrad)"></use>
+            <!-- riflesso lucido -->
+            <use href="#heartPath" fill="url(#heartShine)"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+</section>
+
+  <!-- ========================= CARTOLINA / BUSTA ========================= -->
+  <section class="postcard-section" aria-label="Cartolina">
+    <div class="postcard-heading">
+      <h2>Una lettera per te</h2>
+      <p>clicca sulla busta per aprirla</p>
+    </div>
+
+    <button class="envelope" id="envelopeBtn" aria-expanded="false" aria-controls="letterContent">
+      <div class="envelope-face"></div>
+      <div class="envelope-triangle tri-left"></div>
+      <div class="envelope-triangle tri-right"></div>
+      <div class="envelope-triangle tri-bottom"></div>
+
+      <div class="letter" id="letterContent">
+        <h3>Per te</h3>
+        <p>Ciao amore della mia vita , Buon anniversario! sto continuando a scrivere e cancellare per poter fare la lettere perfetta, quindi scriverò tutto di getto a sentimento, ti ho avvisato.
+voglio dirti che non ho veramente parole per realizzare veramente che stiamo insieme da un anno, per me ha un'importanza immensa, quando vedo le nostre fototessere mi emoziono quasi.
+Tu nei miei momenti bassi non solo c’eri, ma ci tenevi a supportare, qualsiasi cosa accadesse.
+se non avevo più niente da dare, se ci saremmo visti di meno, se volevo scappare di casa, alle 10 di sera vedendomi piangere in chiamata seduto su un marciapiede.
+e moltissimi altri eventi, mi hanno mostrato che dono tu fossi per me, sei riuscita a farmi emozionare al mio compleanno e diciamolo, è stato il compleanno migliore di sempre che ho avuto ed è stato grazie a te, seriamente ci tengo a dirtelo, mi hai fatto sentire amato e importante come non avrei mai pensato di poter essere amato.
+è bellissimo essere amato da te, fin dal primo giorno ho visto avessi qualcosa di particolare con te, un'energia che non avevo mai visto con nessuno,  stare a fianco a questa energia, e vederti crescere insieme a me,cercando di accompagnarti a ogni passo, ha reso ogni cosa speciale, non capisco perch'e mi ringrazi, per me è sempre un piacere vedere crescere la persona con cui voglio passare il mio futuro.
+
+perdonami se ho scritto male qualcosa , o sia too much. Buon anniversario amore, il primo dei molti in cui voglio crescere con te.</p>
+        
+        <p>perdonami se ho scritto male qualcosa , o sia too much. Buon anniversario amore, il primo dei molti in cui voglio crescere con te.</p>
+        <p class="firma">Luen - tuo marito</p>
+      </div>
+
+      <div class="envelope-triangle tri-top"></div>
+      <div class="wax-seal">&#10084;</div>
+    </button>
+
+    <p class="envelope-hint" id="envelopeHint">Clicca per aprire</p>
+  </section>
+
+  <!-- ========================= FOOTER ========================= -->
+  <footer class="site-footer" id="contatti">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h2>CONTATTAMI</h2>
+        <p>Scrivimi quando vuoi: come sempre, ormai ti tormento da un anno.</p>
+      </div>
+      <div class="footer-col">
+        <h4>NAVIGA</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="momenti.html">Momenti</a></li>
+          <li><a href="tiamo.html">Ti Amo</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>SCRIVIMI</h4>
+        <ul>
+          <li><p>TylerBestia@Edward.it</p></li>
+          <li><p>+39 000 000 0000</p></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>SEGUIMI</h4>
+        <div class="socials">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="WhatsApp">WA</a>
+          <a href="#" aria-label="Email">@</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Luen&Milly solo nostro. Tutti i diritti riservati.</p>
+      <p>Fatto per te... seriamente stai leggendo fino a qui?</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    /* ---------- TOAST per i link non ancora esistenti ---------- */
+    const toastEl = document.getElementById('toast');
+    let toastTimer = null;
+    function showToast(msg){
+      clearTimeout(toastTimer);
+      toastEl.textContent = msg;
+      toastEl.classList.add('show');
+      toastTimer = setTimeout(() => toastEl.classList.remove('show'), 2200);
+    }
+    document.querySelectorAll('a[data-page]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const page = link.dataset.page;
+        showToast('La pagina "' + page + '" è in arrivo ❤');
+      });
+    });
+
+    /* ---------- CUORE 3D CHE RIMBALZA ---------- */
+    const stage = document.getElementById('heartStage');
+    const mover = document.getElementById('heartMover');
+    let x = 40, y = 40;
+    let vx = 1.6, vy = 1.3;
+    const size = 110;
+
+    function step(){
+      const rect = stage.getBoundingClientRect();
+      const maxX = rect.width - size;
+      const maxY = rect.height - size;
+
+      x += vx;
+      y += vy;
+
+      if (x <= 0){ x = 0; vx = Math.abs(vx); }
+      if (x >= maxX){ x = maxX; vx = -Math.abs(vx); }
+      if (y <= 0){ y = 0; vy = Math.abs(vy); }
+      if (y >= maxY){ y = maxY; vy = -Math.abs(vy); }
+
+      mover.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0)';
+      requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+
+    window.addEventListener('resize', () => {
+      const rect = stage.getBoundingClientRect();
+      x = Math.min(x, rect.width - size);
+      y = Math.min(y, rect.height - size);
+    });
+
+    /* ---------- BUSTA / CARTOLINA CHE SI APRE ---------- */
+    const envelope = document.getElementById('envelopeBtn');
+    const hint = document.getElementById('envelopeHint');
+    envelope.addEventListener('click', () => {
+      const isOpen = envelope.classList.toggle('open');
+      envelope.setAttribute('aria-expanded', isOpen);
+      hint.textContent = isOpen ? 'Clicca per richiudere' : 'Clicca per aprire';
+    });
+  </script>
+
+</body>
+</html>
