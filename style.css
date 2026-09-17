@@ -17,7 +17,7 @@
   body{
     margin:0;
     font-family:var(--font-ui);
-    background:var(--bianco);
+    background: rgb(255, 233, 225);
     color:var(--nero);
     -webkit-font-smoothing:antialiased;
   }
@@ -478,13 +478,38 @@
     transform:rotate(30deg);
   }
 
-  .momento-text{
-    max-width:46ch;
-  }
+   .momento-text{
+  position:relative;
+  max-width:46ch;
+  padding:28px 30px;
+  background:#fffdf8;
+
+  border:2px solid var(--rosso);
+  border-radius:3px;
+
+  transform:rotate(0.5deg);
+
+  box-shadow:5px 5px 0 rgba(0,0,0,.08);
+}
+
+.momento-text::after{
+  content:"";
+  position:absolute;
+  inset:5px;
+
+  border:1px dashed rgba(180, 50, 70, .45);
+  pointer-events:none;
+}
 
   .momento-date{
     font-family:'Caveat', cursive;
     font-size:1.6rem;
+    color:var(--rosso);
+    margin-bottom:6px;
+  }
+  .momento-descr{
+    font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+    font-size:2rem;
     color:var(--rosso);
     margin-bottom:6px;
   }
@@ -500,6 +525,9 @@
     line-height:1.75;
     font-size:1.02rem;
     margin-bottom:14px;
+    width: 100%;
+    max-width: none;
+    
   }
 
   .momento-text p:last-child{ margin-bottom:0; }
@@ -541,10 +569,27 @@
   }
 
   .momento-text{
-    margin:0;
-    max-width:none;
-  }
+  position:relative;
+  max-width:46ch;
+  padding:28px 30px;
+  background:#fffdf8;
 
+  border:2px solid var(--rosso);
+  border-radius:3px;
+
+  transform:rotate(0.5deg);
+
+  box-shadow:5px 5px 0 rgba(0,0,0,.08);
+}
+
+.momento-text::after{
+  content:"";
+  position:absolute;
+  inset:5px;
+
+  border:1px dashed rgba(180, 50, 70, .45);
+  pointer-events:none;
+}
   .momento-text h2{
     font-size:1.35rem;
   }
